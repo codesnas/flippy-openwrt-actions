@@ -181,7 +181,7 @@ jobs:
 
           armvirt_tarfile_path="openwrt/bin/targets/armvirt/64"
           [[ -d "${armvirt_tarfile_path}" ]] || mkdir -p ${armvirt_tarfile_path}
-          ln -sf /builder/openwrt ${GITHUB_WORKSPACE}/openwrt
+          ln -sf /builder/openwrt ${{ github.workspace }}/openwrt
 
           latest_version=$(curl -s \
                 -H "Accept: application/vnd.github+json" \

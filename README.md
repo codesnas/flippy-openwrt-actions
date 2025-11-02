@@ -18,6 +18,7 @@ This Actions can be used by referencing it in the `.github/workflows/*.yml` clou
     PACKAGE_SOC: all
     KERNEL_VERSION_NAME: 6.1.y_6.6.y
     KERNEL_AUTO_LATEST: true
+    OPENWRT_IP: 10.10.10.1
 ```
 
 ## Optional Parameters
@@ -81,6 +82,8 @@ Based on the latest kernel packaging scripts released by `Flippy`, optional para
 | ENABLE_WIFI_K510       | 1                      | Set the value for `ENABLE_WIFI_K510` in `make.env`            |
 | DISTRIB_REVISION       | R$(date +%m.%d)        | Set the value for `DISTRIB_REVISION` in `make.env`            |
 | DISTRIB_DESCRIPTION    | OpenWrt                | Set the value for `DISTRIB_DESCRIPTION` in `make.env`         |
+| OPENWRT_IP             | 192.168.1.1            | Set the default `IP` address for OpenWrt                      |
+
 
 💡 In general, using the default parameters is sufficient, but you can configure them according to your needs. For instance, if Flippy renames the packaging script making the original default script file unfindable, or if the firmware version number in make.env is not updated, you can use optional parameters for real-time specification and personalized configuration.
 

@@ -18,6 +18,7 @@
     PACKAGE_SOC: all
     KERNEL_VERSION_NAME: 6.1.y_6.6.y
     KERNEL_AUTO_LATEST: true
+    OPENWRT_IP: 10.10.10.1
 ```
 
 ## 可选参数说明
@@ -81,6 +82,7 @@
 | ENABLE_WIFI_K510       | 1                      | 设置 `make.env` 中 `ENABLE_WIFI_K510` 参数的值  |
 | DISTRIB_REVISION       | R$(date +%m.%d)        | 设置 `make.env` 中 `DISTRIB_REVISION` 参数的值  |
 | DISTRIB_DESCRIPTION    | OpenWrt                | 设置 `make.env` 中 `DISTRIB_DESCRIPTION` 参数的值  |
+| OPENWRT_IP             | 192.168.1.1            | 设置 OpenWrt 的默认 `IP` 地址                   |
 
 💡 一般情况下使用默认参数即可，你也可以根据需要进行配置。例如在 Flippy 把打包脚本重命名后导致无法找到原默认脚本文件、make.env 中的固件版本号未更新等情况下，你可以使用可选参数进行实时指定及个性化配置。
 

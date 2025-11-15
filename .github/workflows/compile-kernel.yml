@@ -218,10 +218,6 @@ jobs:
           compress_format: ${{ inputs.compress_format }}
           silent_log: ${{ inputs.silent_log }}
 
-      - name: Show ccache statistics
-        run: |
-          ccache -s
-
       - name: Upload Kernel to Release
         uses: ncipollo/release-action@main
         if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
